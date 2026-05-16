@@ -1,0 +1,44 @@
+[
+    {
+        "top": "T-shirt",
+        "bottom": "Skirt",
+        "shoes": "Adidas",
+        "style": "Sport",
+        "event": "Walk",
+        "weather": "Sunny"
+    },
+    {
+        "top": "Hoodie",
+        "bottom": "Jeans",
+        "shoes": "Nike",
+        "style": "Casual",
+        "event": "University",
+        "weather": "Cold"
+    },
+    {
+        "top": "Shirt",
+        "bottom": "Pants",
+        "shoes": "Heels",
+        "style": "Formal",
+        "event": "Work",
+        "weather": "Rainy"
+    },
+    {
+        "top": "Hoodie",
+        "bottom": "Dark baggy jeans ",
+        "shoes": "Adidas sneakers",
+        "style": "Casual",
+        "event": "University",
+        "weather": "Sunny",
+        "image": "Image_11.05.2026_at_18.43.png"
+    },
+    {
+        "top": "shirt",
+        "bottom": "jeans",
+        "shoes": "nike",
+        "style": "Casual",
+        "event": "University",
+        "weather": "Sunny",
+        "image": ""
+    }
+]
