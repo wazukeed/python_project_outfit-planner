@@ -163,8 +163,12 @@ def recommend_outfit():
                 best_match = matches
                 recommended = outfit
 
-    return render_template("recommend.html", outfit=recommended)
-
+    return render_template(
+        "recommend.html",
+        outfit=recommended,
+        selected_event=event if request.method == "POST" else "",
+        selected_weather=weather if request.method == "POST" else ""
+)
 if __name__ == "__main__":
 
     app.run(debug=True)
