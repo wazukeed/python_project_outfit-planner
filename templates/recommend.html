@@ -13,17 +13,17 @@
         <form method="POST">
 
             <select name="event">
-                <option>University</option>
-                <option>Work</option>
-                <option>Party</option>
-                <option>Walk</option>
+                <option {% if selected_event == "University" %}selected{% endif %}>University</option>
+                <option {% if selected_event == "Work" %}selected{% endif %}>Work</option>
+                <option {% if selected_event == "Party" %}selected{% endif %}>Party</option>
+                <option {% if selected_event == "Walk" %}selected{% endif %}>Walk</option>
             </select>
 
             <select name="weather">
-                <option>Sunny</option>
-                <option>Rainy</option>
-                <option>Cold</option>
-                <option>Hot</option>
+                <option {% if selected_weather == "Sunny" %}selected{% endif %}>Sunny</option>
+                <option {% if selected_weather == "Rainy" %}selected{% endif %}>Rainy</option>
+                <option {% if selected_weather == "Cold" %}selected{% endif %}>Cold</option>
+                <option {% if selected_weather == "Hot" %}selected{% endif %}>Hot</option>
             </select>
 
             <button type="submit">Recommend</button>
