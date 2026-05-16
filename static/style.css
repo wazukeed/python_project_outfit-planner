@@ -1,0 +1,77 @@
+body {
+
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.container {
+
+    width: 80%;
+    margin: auto;
+    padding-top: 40px;
+}
+
+h1 {
+
+    color: #222;
+    margin-bottom: 30px;
+}
+
+button {
+
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    margin: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+
+    background-color: #333;
+}
+
+form {
+
+    background-color: white;
+    width: 350px;
+    margin: auto;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+input,
+select {
+
+    width: 90%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.outfit-card {
+    width: 320px;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    margin: 20px auto;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.outfit-img {
+    width: 250px;
+    height: 250px;
+    object-fit: contain;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    background: white;
+}
