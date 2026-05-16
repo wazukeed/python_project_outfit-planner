@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Filter Outfits</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+
+        <h1>Filter Outfits</h1>
+
+        <form method="POST">
+
+            <select name="style">
+                <option>Casual</option>
+                <option>Formal</option>
+                <option>Sport</option>
+            </select>
+
+            <select name="event">
+                <option>University</option>
+                <option>Work</option>
+                <option>Party</option>
+                <option>Walk</option>
+            </select>
+
+            <select name="weather">
+                <option>Sunny</option>
+                <option>Rainy</option>
+                <option>Cold</option>
+                <option>Hot</option>
+            </select>
+
+            <button type="submit">Filter</button>
+
+        </form>
+
+        {% for outfit in outfits %}
+            <div class="outfit-card">
+                <h2>{{ outfit.style }}</h2>
+                <p><b>Top:</b> {{ outfit.top }}</p>
+                <p><b>Bottom:</b> {{ outfit.bottom }}</p>
+                <p><b>Shoes:</b> {{ outfit.shoes }}</p>
+                <p><b>Event:</b> {{ outfit.event }}</p>
+                <p><b>Weather:</b> {{ outfit.weather }}</p>
+            </div>
+        {% endfor %}
+
+    </div>
+</body>
+</html>

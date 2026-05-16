@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All Outfits</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+
+        <h1>All Outfits</h1>
+
+        <a href="/">
+            <button>Home</button>
+        </a>
+
+        <a href="/add">
+            <button>Add Outfit</button>
+        </a>
+
+        <a href="/">
+            <button>Home</button>
+        </a>
+
+            {% for outfit in outfits %}
+
+            <div class="outfit-card">
+
+                {% if outfit.image %}
+                    <img src="{{ url_for('static', filename='uploads/' + outfit.image) }}"
+                        class="outfit-img">
+                {% endif %}
+
+                <h2>{{ outfit.style }}</h2>
+
+                <p><b>Top:</b> {{ outfit.top }}</p>
+                <p><b>Bottom:</b> {{ outfit.bottom }}</p>
+                <p><b>Shoes:</b> {{ outfit.shoes }}</p>
+                <p><b>Event:</b> {{ outfit.event }}</p>
+                <p><b>Weather:</b> {{ outfit.weather }}</p>
+                     
+                <a href="/edit/{{ loop.index0 }}">
+                     <button>Edit</button>
+                </a>
+
+                <a href="/delete/{{ loop.index0 }}">
+                    <button>Delete</button>
+                </a>
+            </div>
+
+        {% endfor %}
+
+    </div>
+</body>
+</html>

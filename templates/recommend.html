@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recommend Outfit</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+
+        <h1>Choose Outfit</h1>
+
+        <form method="POST">
+
+            <select name="event">
+                <option>University</option>
+                <option>Work</option>
+                <option>Party</option>
+                <option>Walk</option>
+            </select>
+
+            <select name="weather">
+                <option>Sunny</option>
+                <option>Rainy</option>
+                <option>Cold</option>
+                <option>Hot</option>
+            </select>
+
+            <button type="submit">Recommend</button>
+
+        </form>
+
+        {% if outfit %}
+            <div class="outfit-card">
+                <h2>Recommended Outfit</h2>
+                <p><b>Style:</b> {{ outfit.style }}</p>
+                <p><b>Top:</b> {{ outfit.top }}</p>
+                <p><b>Bottom:</b> {{ outfit.bottom }}</p>
+                <p><b>Shoes:</b> {{ outfit.shoes }}</p>
+                <p><b>Event:</b> {{ outfit.event }}</p>
+                <p><b>Weather:</b> {{ outfit.weather }}</p>
+            </div>
+        {% endif %}
+
+    </div>
+</body>
+</html>

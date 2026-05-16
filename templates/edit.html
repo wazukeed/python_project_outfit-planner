@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Outfit</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+
+        <h1>Edit Outfit</h1>
+
+        <form method="POST">
+
+            <input type="text" name="top" value="{{ outfit.top }}" required>
+            <input type="text" name="bottom" value="{{ outfit.bottom }}" required>
+            <input type="text" name="shoes" value="{{ outfit.shoes }}" required>
+
+            <select name="style">
+                <option {% if outfit.style == "Casual" %}selected{% endif %}>Casual</option>
+                <option {% if outfit.style == "Formal" %}selected{% endif %}>Formal</option>
+                <option {% if outfit.style == "Sport" %}selected{% endif %}>Sport</option>
+            </select>
+
+            <select name="event">
+                <option {% if outfit.event == "University" %}selected{% endif %}>University</option>
+                <option {% if outfit.event == "Work" %}selected{% endif %}>Work</option>
+                <option {% if outfit.event == "Party" %}selected{% endif %}>Party</option>
+                <option {% if outfit.event == "Walk" %}selected{% endif %}>Walk</option>
+            </select>
+
+            <select name="weather">
+                <option {% if outfit.weather == "Sunny" %}selected{% endif %}>Sunny</option>
+                <option {% if outfit.weather == "Rainy" %}selected{% endif %}>Rainy</option>
+                <option {% if outfit.weather == "Cold" %}selected{% endif %}>Cold</option>
+                <option {% if outfit.weather == "Hot" %}selected{% endif %}>Hot</option>
+            </select>
+
+            <button type="submit">Save Changes</button>
+
+        </form>
+
+    </div>
+</body>
+</html>

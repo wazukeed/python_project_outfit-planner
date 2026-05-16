@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Outfit</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+
+        <h1>Add Outfit</h1>
+
+        <form method="POST" enctype="multipart/form-data">
+
+            <input type="text" name="top" placeholder="Top" required>
+
+            <input type="text" name="bottom" placeholder="Bottom" required>
+
+            <input type="text" name="shoes" placeholder="Shoes" required>
+
+            <select name="style">
+                <option>Casual</option>
+                <option>Formal</option>
+                <option>Sport</option>
+            </select>
+
+            <select name="event">
+                <option>University</option>
+                <option>Work</option>
+                <option>Party</option>
+                <option>Walk</option>
+            </select>
+
+            <select name="weather">
+                <option>Sunny</option>
+                <option>Rainy</option>
+                <option>Cold</option>
+                <option>Hot</option>
+            </select>
+            
+            <input type="file" name="image">
+            
+            <button type="submit">Save Outfit</button>
+
+        </form>
+
+    </div>
+</body>
+</html>
