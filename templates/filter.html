@@ -38,6 +38,10 @@
 
         {% for outfit in outfits %}
             <div class="outfit-card">
+                {% if outfit.image %}
+                    <img src="{{ url_for('static', filename='uploads/' + outfit.image) }}"
+                         class="outfit-img">
+                {% endif %}
                 <h2>{{ outfit.style }}</h2>
                 <p><b>Top:</b> {{ outfit.top }}</p>
                 <p><b>Bottom:</b> {{ outfit.bottom }}</p>
