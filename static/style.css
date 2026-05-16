@@ -1,27 +1,37 @@
 body {
 
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 
-    background: linear-gradient(
-        135deg,
-        #f6d8e7,
-        #d6e6ff,
-        #fdf6ec
-    );
+    font-family: Arial, sans-serif;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.7),
+            rgba(0,0,0,0.7)
+        ),
+
+        url("https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=1400");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    color: white;
 
     min-height: 100vh;
 }
 
 
-/* CONTAINERS */
+/* CONTAINER */
 
 .container {
 
     width: 90%;
     margin: auto;
+
     padding-top: 40px;
+
     text-align: center;
 }
 
@@ -30,9 +40,11 @@ body {
 
 h1 {
 
-    font-size: 55px;
-    color: #222;
-    margin-bottom: 25px;
+    font-size: 64px;
+
+    margin-bottom: 20px;
+
+    letter-spacing: 2px;
 }
 
 
@@ -40,14 +52,15 @@ h1 {
 
 button {
 
-    background: rgba(255,255,255,0.25);
-    backdrop-filter: blur(10px);
+    background: rgba(255,255,255,0.1);
 
-    color: black;
+    border: 1px solid rgba(255,255,255,0.3);
 
-    border: 1px solid rgba(255,255,255,0.4);
+    backdrop-filter: blur(12px);
 
-    padding: 14px 24px;
+    color: white;
+
+    padding: 14px 28px;
 
     margin: 10px;
 
@@ -62,9 +75,9 @@ button {
 
 button:hover {
 
-    transform: scale(1.05);
+    background: rgba(255,255,255,0.25);
 
-    background: rgba(255,255,255,0.45);
+    transform: scale(1.05);
 }
 
 
@@ -72,19 +85,19 @@ button:hover {
 
 form {
 
-    width: 380px;
+    width: 400px;
 
     margin: auto;
 
-    padding: 30px;
+    padding: 35px;
 
-    border-radius: 25px;
+    border-radius: 24px;
 
-    background: rgba(255,255,255,0.25);
+    background: rgba(0,0,0,0.45);
 
     backdrop-filter: blur(14px);
 
-    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 35px rgba(0,0,0,0.4);
 }
 
 
@@ -93,18 +106,27 @@ form {
 input,
 select {
 
-    width: 90%;
+    width: 92%;
 
-    padding: 12px;
+    padding: 13px;
 
-    margin-top: 12px;
+    margin-top: 10px;
     margin-bottom: 18px;
-
-    border-radius: 12px;
 
     border: none;
 
-    background: rgba(255,255,255,0.7);
+    border-radius: 12px;
+
+    background: rgba(255,255,255,0.12);
+
+    color: white;
+
+    font-size: 15px;
+}
+
+input::placeholder {
+
+    color: rgba(255,255,255,0.7);
 }
 
 
@@ -114,17 +136,17 @@ select {
 
     width: 340px;
 
-    margin: 25px auto;
+    margin: 30px auto;
 
     padding: 25px;
 
     border-radius: 24px;
 
-    background: rgba(255,255,255,0.3);
+    background: rgba(0,0,0,0.5);
 
     backdrop-filter: blur(12px);
 
-    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
 }
 
 
@@ -132,12 +154,13 @@ select {
 
 .outfit-img {
 
-    width: 250px;
-    height: 250px;
+    width: 260px;
+
+    height: 260px;
 
     object-fit: contain;
 
-    border-radius: 18px;
+    border-radius: 20px;
 
     background: white;
 
@@ -145,7 +168,7 @@ select {
 }
 
 
-/* HOME PAGE */
+/* HOME */
 
 .home-page {
 
@@ -167,14 +190,14 @@ select {
 
 .left-side h1 {
 
-    font-size: 72px;
+    font-size: 78px;
 }
 
 .left-side p {
 
     font-size: 22px;
 
-    color: #444;
+    color: rgba(255,255,255,0.8);
 
     line-height: 1.5;
 }
@@ -185,20 +208,20 @@ select {
 
     flex-direction: column;
 
-    gap: 20px;
+    gap: 25px;
 }
 
 .home-img {
 
-    width: 350px;
+    width: 360px;
 
-    height: 450px;
+    height: 460px;
 
     object-fit: cover;
 
-    border-radius: 28px;
+    border-radius: 30px;
 
-    box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+    box-shadow: 0 10px 35px rgba(0,0,0,0.5);
 }
 
 .home-img.small {
